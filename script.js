@@ -22,3 +22,11 @@ function play(playerChoice) {
 
     document.getElementById('score').textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
 }
+resetGame = () => {
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById('score').textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
+    document.getElementById("result").textContent = "Game reset! Choose again.";
+}       
+document.getElementById('reset').addEventListener('click', resetGame);
+    
